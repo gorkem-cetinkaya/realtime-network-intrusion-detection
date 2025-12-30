@@ -52,7 +52,7 @@ Python 3.x installed (for local producer/consumer scripts).
 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/gorkem-cetinkaya/realtime-network-intrusion-detection.git](https://github.com/gorkem-cetinkaya/realtime-network-intrusion-detection.git)
+git clone https://github.com/gorkem-cetinkaya/realtime-network-intrusion-detection.git
 cd realtime-network-intrusion-detection
 ```
 
@@ -108,8 +108,7 @@ Training Accuracy: ~95.0% (Calculated on KDDTrain+)
 Global Streaming Accuracy: ~82.5% (Calculated on live KDDTest+ stream)
 
 ## 📄 Documentation
-For a deep dive into the theoretical background, sequence diagrams, and detailed analysis, please refer to the Project Report (PDF).
-
+For a deep dive into the theoretical background, sequence diagrams, and detailed analysis, please refer to the [Project Report (PDF)](./realtime-network-intrusion-detection.pdf).
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
