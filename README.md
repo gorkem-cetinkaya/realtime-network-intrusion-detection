@@ -41,12 +41,15 @@ network-intrusion-project/
 └── README.md                # Project Documentation
 ```
 
-**`## ⚙️ Installation & Setup`**
-**`### Prerequisites`**
+## ⚙️ Installation & Setup
+
+## Prerequisites
 
 Docker & Docker Compose installed.
 
 Python 3.x installed (for local producer/consumer scripts).
+
+1. Clone the Repository
 
 ```bash
 git clone [https://github.com/gorkem-cetinkaya/realtime-network-intrusion-detection.git](https://github.com/gorkem-cetinkaya/realtime-network-intrusion-detection.git)
@@ -97,18 +100,18 @@ Open another terminal window. This script saves the raw traffic to MongoDB.
 python db_consumer.py
 ```
 
-**`## 📊 Results & Performance`**
+## 📊 Results & Performance
 The system calculates accuracy in real-time. Below is a snapshot of the performance:
 
 Training Accuracy: ~95.0% (Calculated on KDDTrain+)
 
 Global Streaming Accuracy: ~82.5% (Calculated on live KDDTest+ stream)
 
-**`## 📄 Documentation`**
+## 📄 Documentation
 For a deep dive into the theoretical background, sequence diagrams, and detailed analysis, please refer to the Project Report (PDF).
 
-**`## 🤝 Contributing`**
+## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-**`## 📜 License`**
+## 📜 License
 This project is open-source and available under the MIT License.
