@@ -39,15 +39,16 @@ network-intrusion-project/
 ├── verify_mongo.py          # Script to verify database records
 ├── requirements.txt         # Local python dependencies
 └── README.md                # Project Documentation
+```
 
-⚙️ Installation & Setup
-Prerequisites
+**`## ⚙️ Installation & Setup`**
+**`### Prerequisites`**
 
 Docker & Docker Compose installed.
 
 Python 3.x installed (for local producer/consumer scripts).
 
-```
+```bash
 git clone [https://github.com/gorkem-cetinkaya/realtime-network-intrusion-detection.git](https://github.com/gorkem-cetinkaya/realtime-network-intrusion-detection.git)
 cd realtime-network-intrusion-detection
 ```
@@ -56,7 +57,7 @@ cd realtime-network-intrusion-detection
 
 This command starts Zookeeper, Kafka, Spark Master/Worker, and MongoDB.
 
-```
+```bash
 docker-compose up -d
 ```
 
@@ -64,7 +65,7 @@ docker-compose up -d
 
 For the producer and consumer scripts running on your host machine:
 
-```
+```bash
 pip install kafka-python pymongo
 ```
 
@@ -72,7 +73,7 @@ pip install kafka-python pymongo
 
 This step submits the Spark job to the cluster. It will first train the model and then start listening for the stream. (Note: The command includes the necessary Kafka SQL packages)
 
-```
+```bash
 docker exec -u 0 -it spark-master /opt/spark/bin/spark-submit \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 \
   /opt/spark-apps/processor.py
@@ -84,7 +85,7 @@ Wait until you see the message: >>> Model Trained. Starting Streaming...
 
 Open a new terminal window. This script reads the test dataset and sends it to Kafka.
 
-```
+```bash
 python producer.py
 ```
 
@@ -92,22 +93,22 @@ python producer.py
 
 Open another terminal window. This script saves the raw traffic to MongoDB.
 
-```
+```bash
 python db_consumer.py
 ```
 
-📊 Results & Performance
+**`## 📊 Results & Performance`**
 The system calculates accuracy in real-time. Below is a snapshot of the performance:
 
 Training Accuracy: ~95.0% (Calculated on KDDTrain+)
 
 Global Streaming Accuracy: ~82.5% (Calculated on live KDDTest+ stream)
 
-📄 Documentation
+**`## 📄 Documentation`**
 For a deep dive into the theoretical background, sequence diagrams, and detailed analysis, please refer to the Project Report (PDF).
 
-🤝 Contributing
+**`## 🤝 Contributing`**
 Contributions, issues, and feature requests are welcome!
 
-📜 License
+**`## 📜 License`**
 This project is open-source and available under the MIT License.
