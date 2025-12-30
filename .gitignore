@@ -1,0 +1,19 @@
+# Python Cache
+__pycache__/
+*.pyc
+
+# Mac System Files
+.DS_Store
+
+# Virtual Environment
+venv/
+env/
+
+# Spark Logs
+derby.log
+metastore_db/
+checkpoint/
+
+# IDE Settings
+.vscode/
+.idea/
